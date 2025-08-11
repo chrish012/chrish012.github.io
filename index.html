@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Crystal Lake Fishing Tours - Jason's Guide Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #2c5530 0%, #1a3a1e 100%);
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(139, 90, 45, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #8B4513;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 2.2rem;
+            color: #2d5016;
+            font-style: italic;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #4a4a4a;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            background: rgba(139, 0, 0, 0.1);
+            border: 2px solid #8B0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #8B0000;
+            text-align: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: rgba(245, 245, 220, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            color: #8B4513;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2d5016;
+            padding-bottom: 8px;
+        }
+
+        .features {
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "🎣";
+            position: absolute;
+            left: 0;
+        }
+
+        .packages-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .packages-table th,
+        .packages-table td {
+            padding: 12px;
+            text-align: left;
+            border: 2px solid #8B4513;
+        }
+
+        .packages-table th {
+            background: #8B4513;
+            color: white;
+            font-weight: bold;
+        }
+
+        .packages-table tr:nth-child(even) {
+            background: rgba(139, 69, 19, 0.1);
+        }
+
+        .testimonials {
+            background: rgba(245, 245, 220, 0.95);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #2d5016;
+            background: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        .booking {
+            background: rgba(139, 0, 0, 0.9);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .booking h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-info {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .phone {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .website {
+            font-size: 1.3rem;
+            color: #FFD700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .spooky-text {
+            animation: flicker 3s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">CAMP CRYSTAL LAKE</div>
+            <div class="subtitle">FISHING TOURS</div>
+            <div class="tagline">"Catch More Than Just Fish..."</div>
+        </header>
+
+        <div class="warning spooky-text">
+            ⚠️ Tours led by local expert who's been here since the '80s... and never left ⚠️
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>Why Fish With Jason?</h2>
+                <ul class="features">
+                    <li><strong>Expert local knowledge</strong> (he's been here since '80s... and never left)</li>
+                    <li><strong>Private tours</strong>, dawn to dusk (or after dark, if you dare)</li>
+                    <li><strong>All gear provided</strong> — rods, reels, masks, mache—uh, snacks</li>
+                    <li><strong>Scenic, quiet lake</strong> — no crowds, no distractions</li>
+                    <li><strong>Silent guide</strong> who never says much, but always gets results</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>What You'll See</h2>
+                <ul class="features">
+                    <li>Giant bass, pike, and maybe something... else</li>
+                    <li>Thick pine forests, misty mornings, moonlit waters</li>
+                    <li>A guide who never removes his mask (it's a... fishing thing)</li>
+                    <li>Mysterious underwater structures (definitely not cabins)</li>
+                    <li>An experience you'll never forget... if you survive it</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tour Packages</h2>
+            <table class="packages-table">
+                <tr>
+                    <th>Package</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><strong>Final Cast</strong></td>
+                    <td>2-hour evening trip, includes gear & bait</td>
+                </tr>
+                <tr>
+                    <td><strong>Campfire & Cast</strong></td>
+                    <td>Half-day + fireside meal (bring your own s'mores)</td>
+                </tr>
+                <tr>
+                    <td><strong>The Full Voorhees</strong></td>
+                    <td>Full-day, solo tour - no questions asked</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                "Didn't see another soul all day. Just me, the lake, and Jason."<br>
+                <strong>— Lori, tourist from Illinois</strong>
+            </div>
+            <div class="testimonial">
+                "Best fishing trip I ever took. Still have nightmares about it."<br>
+                <strong>— Steve, return customer</strong>
+            </div>
+            <div class="testimonial">
+                "Jason really knows where the bodies— I mean, where the fish are hiding!"<br>
+                <strong>— Anonymous (requested anonymity for obvious reasons)</strong>
+            </div>
+        </div>
+
+        <div class="booking">
+            <h2 class="spooky-text">BOOK TODAY...</h2>
+            <div style="font-size: 1.8rem; margin: 15px 0;">
+                <em>or He Might Come Find You</em>
+            </div>
+            <div class="phone">(555) 1313-LAKE</div>
+            <div class="website">www.CrystalLakeTours.net</div>
+            <div style="margin-top: 20px; font-size: 1.1rem;">
+                <em>*No refunds. Survival not guaranteed. Please sign waiver in blood.*</em>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 Camp Crystal Lake Fishing Tours | Licensed Guide Since 1979 | "We'll hook you up... one way or another"</p>
+        </footer>
+    </div>
+</body>
+</html>
